@@ -20,7 +20,7 @@ def c_axmodN(Ux, x):
 
     # encapsulate
     circuit = circuit.to_gate()
-    circuit.name = "%i^%i mod %i" % (a, x, N)
+    circuit.name = "a^%i mod %i" % (x, N)
 
     # make control bit
     circuit = circuit.control()
@@ -94,7 +94,7 @@ if __name__ == '__main__':
             # we do not have to run quantum circuits. Considering purpose of this homework,
             # we pick another a and use it to run quantum circuits.
             a = np.random.randint(2, N)
-            
+
         # Assured that gcd(a, N) == 1
         print("a = %i chosen" % (a))
 
